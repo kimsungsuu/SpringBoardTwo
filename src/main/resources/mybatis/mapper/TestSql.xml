@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--xml id = mapper method 명-->
+<!--namespace = mapper의 경로-->
+<!--TODO : resultType이 DTO 경로가 맞는지 확인(DTO에 데이터 정보들을 사용하기위해 ResultType을 가져오는 것으로 보임 )-->
+<!--TODO : parameterType에 무엇이 들어가는지 정확하게 알아보자-->
+
+<mapper namespace="com.sungsu.SpringBoardTwo.model.dao.TestDAO">
+    <select id = "getTestData" resultType="com.sungsu.SpringBoardTwo.model.dto.TestDTO">
+        select
+            title,
+            name
+        from
+            DB_TEST
+    </select>
+</mapper>
+
+

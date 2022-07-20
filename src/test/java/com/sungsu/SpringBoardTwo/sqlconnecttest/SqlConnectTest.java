@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 
 /**
  * mysql이 정상적으로 연결 되는지 확인하는 Test
- * Class.forName : 드라이버 로드
+ * Class.forName : 드라이버 로드, JDBC 4.0 ver 이상 부터는 따로 호출하지 않아도 datasource를 자동으로 로딩
  * getConnection : mysql 연결
  */
 
@@ -20,7 +20,7 @@ public class SqlConnectTest {
     @Test
     public void testConnection() throws Exception{
 
-        Class.forName(DRIVER);
+//        Class.forName(DRIVER);
 
         try{
             Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
